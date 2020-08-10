@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Medical Insurance Console</title>
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="./mystyle.css">
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="./javascript/main.js"></script>
+
+</head>
+<body>
+
+	<div id="loginForm">
+	<div class = "row">
+	<div class="col s14 m6 offset-m4">
+	<div class="card">
+	<div class="card-action teal lighten-1 white-text">
+		<h3>Medical Insurance Management</h3>
+	</div> 
+	<div class="card-content">
+		<div class="form-field">
+		<input type="email" id="txtUsername" placeholder="Enter username" center /><br /> 
+		</div>
+		<div class="form-field">
+		<input type="password" id="txtPassword"placeholder="Enter password" /><br />
+		</div>
+		
+		<div class="form-field">
+		<div id="loginType">
+			<form action="#">
+				<p>
+					<label> <input id="employeeLogin" name="group1"
+						type="radio" checked /> <span>Patient Login</span></label>
+				</p>
+				<p>
+					<label> <input id="managerLogin" name="group1" type="radio" />
+						<span>Doctor Login</span></label>
+				</p>
+			</form>
+		</div>
+		</div>
+		<div class="form-field">
+				<button class="btn-large waves-effects" id="btnLogin">Log in</button>
+		</div>
+		
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+
+	<div id="employeeView">
+
+		<div class = "row">
+		<div class="col s14 m3 offset-m2">
+		<div class="card">
+		<div class="card-action  light-blue text-white lighten-1 white-text">	
+		<h3>Patient Management</h3>
+		</div>
+		</div>
+		</div>
+		</div>
+
+		<div id="reimbursementForm">
+			<input type="email" id="txtReason" placeholder="Enter Reason for insurance claim" /><br /> 
+			<input type="email" id="txtAmount"placeholder="Enter Amount of insurance claim" /><br />
+			<button class="btn-large waves-effects light-blue text-white" id="btnReimbursement">Submit Insurance Claim</button>
+		</div>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Status</th>
+						<th>Reason</th>
+						<th>Note</th>
+
+					</tr>
+				</thead>
+
+				<tbody id="tableElementsEmployeeReimbursements">
+
+				</tbody>
+			</table>
+
+		</div>
+
+
+
+		<div id="managerView">
+		
+		<div class = "row">
+		<div class="col s14 m3 offset-m2">
+		<div class="card">
+		<div class="card-action  light-blue text-white lighten-1 white-text">	
+			<h3> Doctor Management</h3>
+			
+		</div>
+		</div>
+		</div>
+		</div>
+		
+			<table id="managerTable">
+				<thead>
+					<tr>
+						<th>Patient</th>
+						<th>Amount</th>
+						<th>Status</th>
+						<th>Reason</th>
+						<th>Approval</th>
+						<th>Note</th>
+
+					</tr>
+				</thead>
+
+				<tbody id="tableElementsManagerReimbursements">
+
+				</tbody>
+			</table>
+
+
+		</div>
+
+</body>
+
+
+</html>
